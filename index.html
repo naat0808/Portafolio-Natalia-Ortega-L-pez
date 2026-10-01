@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalia Ortega López | Business Intelligence & Perfil Profesional</title>
-    <meta name="description" content="Portafolio profesional y perfil ejecutivo de Natalia Ortega López. Estudiante de Business Intelligence en Universidad Panamericana (Campus Mixcoac). Analítica, disciplina y visión estratégica.">
+    <title>Natalia Ortega López — Business Intelligence & Portfolio</title>
+    <meta name="description" content="Portafolio editorial de Natalia Ortega López. Estudiante de Business Intelligence en Universidad Panamericana. Estrategia de datos, disciplina artística y bienestar.">
     
-    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,36 +21,37 @@
             theme: {
                 extend: {
                     fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        display: ['"Outfit"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif']
                     },
                     colors: {
-                        primary: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            200: '#bae0fd',
-                            600: '#1d4ed8',
-                            700: '#1e40af',
-                            800: '#1e3a8a',
-                            900: '#0f172a'
+                        sand: {
+                            50: '#FDFBF9',
+                            100: '#FAF7F2',
+                            200: '#F4ECE1',
+                            300: '#EAE0D1',
+                            400: '#DDD0BE',
+                            500: '#C7B79E',
+                            600: '#A8977E',
+                            700: '#84745E',
+                            800: '#5C503F',
+                            900: '#3D3428'
                         },
-                        rosewood: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            600: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239'
+                        terracotta: {
+                            50: '#FDF7F5',
+                            100: '#FCEEE9',
+                            200: '#F9D9CE',
+                            300: '#F3BDAE',
+                            400: '#E89882',
+                            500: '#D57358',
+                            600: '#BC573B',
+                            700: '#9B422A',
+                            800: '#7C3421',
                         },
-                        warm: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917'
+                        charcoal: {
+                            800: '#2E2B28',
+                            900: '#1F1D1A',
+                            950: '#141311'
                         }
                     }
                 }
@@ -60,322 +61,260 @@
     
     <style>
         body {
-            background-color: #FAFAFA;
-            color: #1E293B;
+            background-color: #FAF7F2;
+            color: #2E2B28;
+            letter-spacing: -0.01em;
         }
-        .clean-card {
+        .editorial-card {
             background: #FFFFFF;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #EAE0D1;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .clean-card:hover {
-            box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
-            border-color: #CBD5E1;
-            transform: translateY(-2px);
+        .editorial-card:hover {
+            border-color: #C7B79E;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px -10px rgba(61, 52, 40, 0.08);
         }
-        .subtle-gradient {
-            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+        .tag-pill {
+            background: #F4ECE1;
+            color: #5C503F;
+            border: 1px solid #EAE0D1;
         }
-        .hero-pattern {
-            background-image: radial-gradient(#CBD5E1 0.75px, transparent 0.75px);
-            background-size: 24px 24px;
+        .line-accent {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #DDD0BE, transparent);
         }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-primary-100 selection:text-primary-800">
+<body class="font-sans antialiased selection:bg-terracotta-200 selection:text-terracotta-800">
 
-    <!-- Top Announcement / Status Bar -->
-    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium tracking-wide">
-        <span>📍 Estudiante de Business Intelligence | Universidad Panamericana (Campus Mixcoac)</span>
+    <!-- Top Delicate Header Bar -->
+    <div class="border-b border-sand-200 bg-sand-50/80 backdrop-blur-sm text-center py-2 px-4 text-[11px] uppercase tracking-[0.25em] font-medium text-sand-800">
+        Universidad Panamericana • Licenciatura en Business Intelligence • CDMX
     </div>
 
-    <!-- Executive Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-sand-200 transition-all">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            <a href="#hero" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-display font-bold text-sm tracking-wider group-hover:bg-primary-700 transition-colors">
-                    NO
-                </div>
-                <div>
-                    <span class="font-display font-bold text-base text-slate-900 tracking-tight block">Natalia Ortega López</span>
-                    <span class="text-[11px] font-semibold text-slate-500 tracking-wide uppercase block">Business Intelligence</span>
-                </div>
+            <a href="#hero" class="group flex items-baseline gap-2">
+                <span class="font-serif text-2xl sm:text-3xl font-normal tracking-tight text-charcoal-900 group-hover:text-terracotta-600 transition-colors">
+                    Natalia Ortega
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-sand-600 hidden sm:inline-block">
+                    / Portfolio
+                </span>
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-                <a href="#perfil" class="hover:text-slate-900 transition-colors">Sobre Mí</a>
-                <a href="#academico" class="hover:text-slate-900 transition-colors">Formación</a>
-                <a href="#trayectoria" class="hover:text-slate-900 transition-colors">Experiencia & Danza</a>
-                <a href="#competencias" class="hover:text-slate-900 transition-colors">Competencias</a>
-                <a href="#proyectos" class="hover:text-slate-900 transition-colors">Visión & Estudio</a>
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] font-medium text-sand-800">
+                <a href="#perfil" class="hover:text-terracotta-600 transition-colors">Perfil</a>
+                <a href="#academico" class="hover:text-terracotta-600 transition-colors">Formación</a>
+                <a href="#experiencia" class="hover:text-terracotta-600 transition-colors">Danza & Misiones</a>
+                <a href="#habilidades" class="hover:text-terracotta-600 transition-colors">Competencias</a>
+                <a href="#vision" class="hover:text-terracotta-600 transition-colors">El Estudio</a>
             </nav>
 
-            <!-- Actions -->
+            <!-- Contact Button -->
             <div class="flex items-center gap-3">
-                <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold tracking-wide transition-all shadow-sm">
+                <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal-900 text-sand-50 text-[11px] uppercase tracking-[0.18em] font-medium hover:bg-terracotta-600 transition-all">
                     <span>Contactar</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-[9px]"></i>
                 </a>
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900" aria-label="Menú móvil">
-                    <i class="fa-solid fa-bars"></i>
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-full border border-sand-300 flex items-center justify-center text-charcoal-900 hover:bg-sand-100" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars-staggered text-sm"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-white border-b border-slate-200 space-y-3 text-sm font-medium">
-            <a href="#perfil" class="block py-2 text-slate-700 hover:text-slate-900">Sobre Mí</a>
-            <a href="#academico" class="block py-2 text-slate-700 hover:text-slate-900">Formación</a>
-            <a href="#trayectoria" class="block py-2 text-slate-700 hover:text-slate-900">Experiencia & Danza</a>
-            <a href="#competencias" class="block py-2 text-slate-700 hover:text-slate-900">Competencias</a>
-            <a href="#proyectos" class="block py-2 text-slate-700 hover:text-slate-900">Visión & Estudio</a>
-            <a href="#contacto" class="block py-2 font-bold text-primary-700">Contacto Directo</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-6 bg-[#FAF7F2] border-b border-sand-200 space-y-4 text-xs uppercase tracking-[0.2em] font-medium text-sand-800">
+            <a href="#perfil" class="block py-1 hover:text-terracotta-600">Perfil & Valores</a>
+            <a href="#academico" class="block py-1 hover:text-terracotta-600">Formación Académica</a>
+            <a href="#experiencia" class="block py-1 hover:text-terracotta-600">Danza & Misiones</a>
+            <a href="#habilidades" class="block py-1 hover:text-terracotta-600">Competencias & Idiomas</a>
+            <a href="#vision" class="block py-1 hover:text-terracotta-600">Proyecto Estudio</a>
+            <a href="#contacto" class="block py-1 text-terracotta-600 font-bold">Contacto Directo</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative py-20 lg:py-28 px-6 hero-pattern border-b border-slate-200/60 bg-gradient-to-b from-white via-slate-50 to-slate-100/50">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Column: Executive Bio -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-semibold shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        Licenciatura en Inteligencia de Negocios
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                        Estrategia de datos, <span class="text-primary-700 font-serif italic font-normal">disciplina</span> y visión emprendedora.
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                        Soy <strong class="text-slate-900 font-semibold">Natalia Ortega López</strong>. Integro el rigor analítico del <em>Business Intelligence</em> con la perseverancia forjada durante más de una década en danza de alta exigencia, liderazgo en acción social y mentalidad de mejora continua.
-                    </p>
-
-                    <!-- Key Metrics Cards -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-                            <span class="block text-2xl font-display font-bold text-slate-900">+12</span>
-                            <span class="text-xs text-slate-500 font-medium">Años de Danza</span>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-                            <span class="block text-2xl font-display font-bold text-primary-700">UP</span>
-                            <span class="text-xs text-slate-500 font-medium">Campus Mixcoac</span>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-                            <span class="block text-2xl font-display font-bold text-slate-900">2</span>
-                            <span class="text-xs text-slate-500 font-medium">Idiomas</span>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center shadow-sm">
-                            <span class="block text-2xl font-display font-bold text-emerald-600">100%</span>
-                            <span class="text-xs text-slate-500 font-medium">Compromiso</span>
-                        </div>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#contacto" class="px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs tracking-wide transition-all shadow-sm flex items-center gap-2">
-                            <i class="fa-regular fa-envelope"></i>
-                            <span>Iniciar Contacto</span>
-                        </a>
-                        <a href="#perfil" class="px-6 py-3 rounded-lg bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs tracking-wide border border-slate-300 transition-all flex items-center gap-2">
-                            <i class="fa-solid fa-address-card text-slate-400"></i>
-                            <span>Consultar Perfil Completo</span>
-                        </a>
-                    </div>
-
-                </div>
-
-                <!-- Right Column: Profile Identity Card -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="w-full max-w-sm bg-white rounded-2xl border border-slate-200 p-7 shadow-lg shadow-slate-200/50 space-y-6">
-                        
-                        <div class="flex items-center gap-4 border-b border-slate-100 pb-5">
-                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 text-white flex items-center justify-center font-display font-bold text-2xl shadow-inner">
-                                NO
-                            </div>
-                            <div>
-                                <h2 class="text-lg font-display font-bold text-slate-900">Natalia Ortega López</h2>
-                                <p class="text-xs text-primary-700 font-semibold">Business Intelligence</p>
-                                <p class="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
-                                    <i class="fa-solid fa-location-dot text-slate-400 text-[10px]"></i>
-                                    CDMX • 18 años
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Info Rows -->
-                        <div class="space-y-3 text-xs">
-                            <div class="flex items-center justify-between py-1 border-b border-slate-100">
-                                <span class="text-slate-500">Carrera</span>
-                                <span class="font-semibold text-slate-900 text-right">Business Intelligence</span>
-                            </div>
-                            <div class="flex items-center justify-between py-1 border-b border-slate-100">
-                                <span class="text-slate-500">Universidad</span>
-                                <span class="font-semibold text-slate-900">Universidad Panamericana</span>
-                            </div>
-                            <div class="flex items-center justify-between py-1 border-b border-slate-100">
-                                <span class="text-slate-500">Campus</span>
-                                <span class="font-semibold text-slate-900">Mixcoac, CDMX</span>
-                            </div>
-                            <div class="flex items-center justify-between py-1 border-b border-slate-100">
-                                <span class="text-slate-500">Educación Media</span>
-                                <span class="font-semibold text-slate-900">Universidad La Salle</span>
-                            </div>
-                            <div class="flex items-center justify-between py-1">
-                                <span class="text-slate-500">Correo</span>
-                                <span class="font-semibold text-primary-700">natalia.ortega1338@gmail.com</span>
-                            </div>
-                        </div>
-
-                        <!-- Direct Fast Links -->
-                        <div class="pt-2 flex gap-2">
-                            <a href="mailto:natalia.ortega1338@gmail.com" class="flex-1 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold text-center transition-colors flex items-center justify-center gap-1.5">
-                                <i class="fa-solid fa-envelope text-slate-500"></i>
-                                <span>Correo</span>
-                            </a>
-                            <a href="tel:7776531326" class="flex-1 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold text-center transition-colors flex items-center justify-center gap-1.5">
-                                <i class="fa-solid fa-phone text-slate-500"></i>
-                                <span>Llamar</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección 1: Sobre Mí & Filosofía de Trabajo -->
-    <section id="perfil" class="py-20 px-6 bg-white border-b border-slate-200/60">
-        <div class="max-w-6xl mx-auto space-y-12">
+    <!-- Hero Section: Editorial & Minimalist -->
+    <section id="hero" class="pt-16 pb-24 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto space-y-12">
             
-            <div class="max-w-2xl space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Identidad & Propósito</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Filosofía personal y profesional</h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Un enfoque estructurado que combina compromiso ético, pensamiento estratégico y alta energía colaborativa.
+            <!-- Monogram & Tagline -->
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sand-200/60 border border-sand-300 text-[11px] uppercase tracking-[0.22em] text-sand-800 font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                    Business Intelligence • Arte • Bienestar
+                </div>
+
+                <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal text-charcoal-900 tracking-tight leading-[1.08]">
+                    Analítica, disciplina & <span class="italic font-light text-terracotta-600">visión en movimiento.</span>
+                </h1>
+
+                <p class="text-sm sm:text-base text-sand-800 font-light leading-relaxed max-w-2xl mx-auto">
+                    Soy <strong class="font-semibold text-charcoal-900">Natalia Ortega López</strong>. Combino la precisión y la visión cuantitativa del <em>Business Intelligence</em> con la constancia forjada en más de doce años de danza y un firme compromiso ético y social.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- Card 1: Quién Soy -->
-                <div class="clean-card p-7 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-base">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <h3 class="text-lg font-display font-bold text-slate-900">¿Quién soy?</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Me defino como una persona responsable, creativa, organizada y perseverante. Disfruto mantener una vida activa y equilibrada, valorando la excelencia en mis estudios y el disfrute en mis actividades deportivas y personales.
-                    </p>
+            <!-- Key Editorial Highlight Strips -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-4">
+                <div class="editorial-card p-6 rounded-2xl text-center">
+                    <span class="font-serif text-3xl sm:text-4xl text-charcoal-900 block font-normal">+12</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sand-700 font-semibold block mt-1">Años en Danza</span>
                 </div>
-
-                <!-- Card 2: Valores -->
-                <div class="clean-card p-7 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-base">
-                        <i class="fa-solid fa-shield-check"></i>
-                    </div>
-                    <h3 class="text-lg font-display font-bold text-slate-900">Valores Fundamentales</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Actúo con base en la <strong>honestidad, empatía, respeto, lealtad, solidaridad y responsabilidad</strong>. Estos principios rigen mi trabajo en equipo y mis compromisos a largo plazo.
-                    </p>
+                <div class="editorial-card p-6 rounded-2xl text-center">
+                    <span class="font-serif text-3xl sm:text-4xl text-terracotta-600 block font-normal">UP</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sand-700 font-semibold block mt-1">Campus Mixcoac</span>
                 </div>
-
-                <!-- Card 3: Por qué yo -->
-                <div class="clean-card p-7 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-base">
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-                    <h3 class="text-lg font-display font-bold text-slate-900">¿Por qué yo?</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Aporto una combinación diferenciada de <strong>rigor cuantitativo, disciplina forjada en el deporte y empatía social</strong>. Mi constancia asegura resultados de calidad y alta fiabilidad en cada proyecto.
-                    </p>
+                <div class="editorial-card p-6 rounded-2xl text-center">
+                    <span class="font-serif text-3xl sm:text-4xl text-charcoal-900 block font-normal">2</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sand-700 font-semibold block mt-1">Idiomas</span>
                 </div>
-
+                <div class="editorial-card p-6 rounded-2xl text-center">
+                    <span class="font-serif text-3xl sm:text-4xl text-charcoal-900 block font-normal">100%</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-sand-700 font-semibold block mt-1">Dedicación</span>
+                </div>
             </div>
 
-            <!-- Valores en etiquetas limpias -->
-            <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-wrap items-center gap-2.5">
-                <span class="text-xs font-bold text-slate-500 uppercase mr-2 tracking-wide">Pilares de Valor:</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Honestidad</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Empatía</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Respeto</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Lealtad</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Solidaridad</span>
-                <span class="px-3 py-1 bg-white rounded-md text-xs font-semibold text-slate-700 border border-slate-200">Responsabilidad</span>
+            <!-- Action Link -->
+            <div class="flex justify-center gap-4 pt-2">
+                <a href="#perfil" class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-charcoal-900 text-sand-50 text-xs uppercase tracking-[0.2em] font-medium hover:bg-terracotta-600 transition-all shadow-sm">
+                    <span>Conocer mi Perfil</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                </a>
+                <a href="#contacto" class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white border border-sand-300 text-charcoal-900 text-xs uppercase tracking-[0.2em] font-medium hover:bg-sand-100 transition-all">
+                    <span>Contacto</span>
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- Sección 2: Formación Académica -->
-    <section id="academico" class="py-20 px-6 bg-slate-50 border-b border-slate-200/60">
-        <div class="max-w-6xl mx-auto space-y-12">
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section I: Perfil & Valores -->
+    <section id="perfil" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-16">
             
-            <div class="max-w-2xl space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Educación Superior</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Trayectoria Académica</h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Preparación académica rigurosa orientada al análisis empresarial y a la proyección internacional.
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
+                <div class="md:col-span-4">
+                    <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block mb-2">01 / Identidad</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Quién soy & Propósito</h2>
+                </div>
+                <div class="md:col-span-8">
+                    <p class="font-serif italic text-xl sm:text-2xl text-sand-800 leading-relaxed font-light">
+                        "Creo en el balance entre el rigor de los datos y la sensibilidad del movimiento. Me considero una persona creativa, organizada y perseverante, con una entrega total a mis valores y proyectos."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="editorial-card p-8 rounded-2xl space-y-4">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-terracotta-600 font-bold block">Esencia</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Autenticidad & Dinamismo</h3>
+                    <p class="text-xs sm:text-sm text-sand-800 leading-relaxed font-light">
+                        Me caracterizo por ser responsable, creativa y con alta energía para colaborar. Valoro el tiempo libre para nutrir mis disciplinas y rodearme de personas inspiradoras.
+                    </p>
+                </div>
+
+                <div class="editorial-card p-8 rounded-2xl space-y-4">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-terracotta-600 font-bold block">Fundamento</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Pilares Éticos</h3>
+                    <p class="text-xs sm:text-sm text-sand-800 leading-relaxed font-light">
+                        Actúo guiada por la <strong>honestidad, empatía, respeto, lealtad, solidaridad y responsabilidad</strong>. Son el cimiento de mis relaciones y de mi desempeño profesional.
+                    </p>
+                </div>
+
+                <div class="editorial-card p-8 rounded-2xl space-y-4">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-terracotta-600 font-bold block">Diferencial</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">¿Por qué yo?</h3>
+                    <p class="text-xs sm:text-sm text-sand-800 leading-relaxed font-light">
+                        Ofrezco una combinación única de <strong>mentalidad analítica, consistencia forjada en el arte de la danza y sensibilidad social</strong> para generar impacto real.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Value Strip -->
+            <div class="p-6 rounded-2xl bg-[#FAF7F2] border border-sand-300/80 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] font-medium text-sand-800">
+                <span class="text-sand-600 text-[10px]">Valores Fundamentales:</span>
+                <span>• Honestidad</span>
+                <span>• Empatía</span>
+                <span>• Respeto</span>
+                <span>• Lealtad</span>
+                <span>• Solidaridad</span>
+                <span>• Responsabilidad</span>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section II: Formación Académica -->
+    <section id="academico" class="py-24 px-6 bg-[#F5EFE6]/50">
+        <div class="max-w-5xl mx-auto space-y-16">
+            
+            <div class="max-w-xl space-y-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block">02 / Trayectoria</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Formación Académica</h2>
+                <p class="text-xs sm:text-sm text-sand-800 font-light">
+                    Preparación universitaria de excelencia con visión estratégica e internacional.
                 </p>
             </div>
 
             <div class="space-y-6">
                 
-                <!-- Universidad Panamericana -->
-                <div class="clean-card p-8 rounded-2xl border-l-4 border-l-primary-700">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                <!-- UP Card -->
+                <div class="editorial-card p-8 sm:p-10 rounded-2xl space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-sand-200 pb-4">
                         <div>
-                            <div class="flex items-center gap-2.5 mb-1.5">
-                                <span class="px-2.5 py-0.5 rounded bg-primary-100 text-primary-800 text-[11px] font-bold">En curso • 1.ᵉʳ Semestre</span>
-                                <span class="text-xs text-slate-400">2026 - Presente</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Licenciatura en Business Intelligence (Inteligencia de Negocios)</h3>
-                            <h4 class="text-sm font-semibold text-slate-600">Universidad Panamericana • Campus Mixcoac, Ciudad de México</h4>
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block mb-1">Licenciatura • En Curso (1.ᵉʳ Semestre)</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl text-charcoal-900 font-normal">Business Intelligence (Inteligencia de Negocios)</h3>
                         </div>
-                        <div class="text-right hidden md:block">
-                            <span class="inline-block px-3 py-1 rounded bg-slate-100 text-slate-700 font-display font-bold text-sm">UP</span>
-                        </div>
+                        <span class="text-xs uppercase tracking-[0.15em] text-sand-600 font-medium">2026 — Presente</span>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                        Formación especializada en analítica cuantitativa, optimización de modelos de negocio, visualización de datos, estadísticas y diseño de estrategias fundamentadas en información confiable.
+
+                    <div class="text-sm font-serif italic text-sand-800">
+                        Universidad Panamericana — Campus Mixcoac, Ciudad de México
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-sand-800 font-light leading-relaxed">
+                        Desarrollo de competencias avanzadas en modelado cuantitativo, optimización de procesos de negocio, analítica de datos y diseño de estrategias para la toma de decisiones empresariales.
                     </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Modelado de Negocios</span>
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Analítica de Datos</span>
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Estrategia Empresarial</span>
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Plan de Doble Titulación Internacional</span>
+
+                    <div class="flex flex-wrap gap-2 pt-2 text-[11px] uppercase tracking-[0.15em]">
+                        <span class="tag-pill px-3 py-1 rounded-full font-medium">Business Analytics</span>
+                        <span class="tag-pill px-3 py-1 rounded-full font-medium">Estrategia & KPIs</span>
+                        <span class="tag-pill px-3 py-1 rounded-full font-medium">Plan de Doble Titulación</span>
                     </div>
                 </div>
 
-                <!-- Universidad La Salle -->
-                <div class="clean-card p-8 rounded-2xl border-l-4 border-l-slate-400">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                <!-- La Salle Card -->
+                <div class="editorial-card p-8 sm:p-10 rounded-2xl space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-sand-200 pb-4">
                         <div>
-                            <div class="flex items-center gap-2.5 mb-1.5">
-                                <span class="px-2.5 py-0.5 rounded bg-slate-200 text-slate-700 text-[11px] font-bold">Concluido</span>
-                                <span class="text-xs text-slate-400">Educación Media Superior</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Bachillerato General</h3>
-                            <h4 class="text-sm font-semibold text-slate-600">Universidad La Salle</h4>
+                            <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-sand-600 block mb-1">Educación Media Superior • Concluido</span>
+                            <h3 class="font-serif text-2xl sm:text-3xl text-charcoal-900 font-normal">Bachillerato General</h3>
                         </div>
-                        <div class="text-right hidden md:block">
-                            <span class="inline-block px-3 py-1 rounded bg-slate-100 text-slate-700 font-display font-bold text-sm">ULS</span>
-                        </div>
+                        <span class="text-xs uppercase tracking-[0.15em] text-sand-600 font-medium">La Salle</span>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                        Formación integral con énfasis en pensamiento crítico, valores comunitarios y participación representativa en actividades artísticas institucionales.
+
+                    <div class="text-sm font-serif italic text-sand-800">
+                        Universidad La Salle
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-sand-800 font-light leading-relaxed">
+                        Formación con sólidos valores humanos y participación representativa en actividades artísticas y culturales.
                     </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Grupo Representativo de Danza</span>
-                        <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">Excelencia Académica y Formación Humana</span>
+
+                    <div class="flex flex-wrap gap-2 pt-2 text-[11px] uppercase tracking-[0.15em]">
+                        <span class="tag-pill px-3 py-1 rounded-full font-medium">Grupo Representativo de Danza</span>
+                        <span class="tag-pill px-3 py-1 rounded-full font-medium">Formación en Valores</span>
                     </div>
                 </div>
 
@@ -384,55 +323,57 @@
         </div>
     </section>
 
-    <!-- Sección 3: Experiencia, Danza y Liderazgo Social -->
-    <section id="trayectoria" class="py-20 px-6 bg-white border-b border-slate-200/60">
-        <div class="max-w-6xl mx-auto space-y-12">
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section III: Danza, Deporte & Misiones -->
+    <section id="experiencia" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-16">
             
-            <div class="max-w-2xl space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Disciplina & Compromiso</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Experiencia, Danza y Servicio</h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Trayectorias que han desarrollado mi capacidad de concentración, resiliencia y empatía comunitaria.
+            <div class="max-w-xl space-y-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block">03 / Experiencia & Disciplina</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Danza, Bienestar & Servicio</h2>
+                <p class="text-xs sm:text-sm text-sand-800 font-light">
+                    La disciplina del movimiento y la vocación por la comunidad.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Danza y Deporte -->
-                <div class="clean-card p-8 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center font-bold text-base">
+                <!-- Danza & Deporte -->
+                <div class="editorial-card p-8 sm:p-10 rounded-2xl space-y-5">
+                    <div class="w-12 h-12 rounded-full bg-sand-200/80 flex items-center justify-center text-charcoal-900 text-lg">
                         <i class="fa-solid fa-person-running"></i>
                     </div>
                     <div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Más de 12 Años de Práctica</span>
-                        <h3 class="text-xl font-display font-bold text-slate-900 mt-1">Danza & Disciplina Deportiva</h3>
+                        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">Desde los 6 años • Grupo Representativo</span>
+                        <h3 class="font-serif text-3xl text-charcoal-900 font-normal mt-1">Danza & Vida Deportiva</h3>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Iniciando desde los 6 años y participando en grupos representativos escolares, la danza ha sido la base de mi constancia, coordinación bajo presión y rigurosidad mental. Complemento esta disciplina con entrenamiento regular en gimnasio y acondicionamiento.
+                    <p class="text-xs sm:text-sm text-sand-800 font-light leading-relaxed">
+                        Más de doce años de práctica continua en danza han moldeado mi perseverancia, expresión escénica, coordinación y temple bajo presión. Complemento mi rutina diaria con entrenamiento en gimnasio y bienestar integral.
                     </p>
-                    <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-2 text-xs">
-                        <span class="font-semibold text-slate-700">• Memoria coreográfica</span>
-                        <span class="font-semibold text-slate-700">• Trabajo en equipo</span>
-                        <span class="font-semibold text-slate-700">• Resistencia mental</span>
+                    <div class="pt-2 border-t border-sand-200 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.15em] text-sand-700">
+                        <span>• Memoria y enfoque</span>
+                        <span>• Resistencia física</span>
+                        <span>• Trabajo en sincronía</span>
                     </div>
                 </div>
 
-                <!-- Misiones y Acción Social -->
-                <div class="clean-card p-8 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center font-bold text-base">
-                        <i class="fa-solid fa-hands-holding"></i>
+                <!-- Misiones -->
+                <div class="editorial-card p-8 sm:p-10 rounded-2xl space-y-5">
+                    <div class="w-12 h-12 rounded-full bg-sand-200/80 flex items-center justify-center text-charcoal-900 text-lg">
+                        <i class="fa-solid fa-hands-holding-heart"></i>
                     </div>
                     <div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">1 Año de Participación Activa</span>
-                        <h3 class="text-xl font-display font-bold text-slate-900 mt-1">Grupos Misioneros & Acción Social</h3>
+                        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">1 Año de Servicio Continuo</span>
+                        <h3 class="font-serif text-3xl text-charcoal-900 font-normal mt-1">Grupos Misioneros & Acción Social</h3>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Participación continua en actividades de apoyo directo a comunidades, organización de dinámicas grupales y acompañamiento social. Esta experiencia consolidó mi vocación de servicio, escucha activa y liderazgo colaborativo.
+                    <p class="text-xs sm:text-sm text-sand-800 font-light leading-relaxed">
+                        Participación activa en misiones comunitarias, organizando talleres, dinámicas y acompañamiento en campo. Esta experiencia fortaleció mi empatía, solidaridad y capacidad de conectar con realidades diversas.
                     </p>
-                    <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-2 text-xs">
-                        <span class="font-semibold text-slate-700">• Empatía profunda</span>
-                        <span class="font-semibold text-slate-700">• Sensibilidad social</span>
-                        <span class="font-semibold text-slate-700">• Comunicación asertiva</span>
+                    <div class="pt-2 border-t border-sand-200 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.15em] text-sand-700">
+                        <span>• Liderazgo colaborativo</span>
+                        <span>• Escucha activa</span>
+                        <span>• Sensibilidad humana</span>
                     </div>
                 </div>
 
@@ -441,79 +382,81 @@
         </div>
     </section>
 
-    <!-- Sección 4: Habilidades & Competencias -->
-    <section id="competencias" class="py-20 px-6 bg-slate-50 border-b border-slate-200/60">
-        <div class="max-w-6xl mx-auto space-y-12">
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section IV: Habilidades & Idiomas -->
+    <section id="habilidades" class="py-24 px-6 bg-[#F5EFE6]/50">
+        <div class="max-w-5xl mx-auto space-y-16">
             
-            <div class="max-w-2xl space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Aptitudes & Dominio</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Competencias e Idiomas</h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Balance entre capacidades metodológicas de Business Intelligence, habilidades blandas e idiomas.
+            <div class="max-w-xl space-y-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block">04 / Competencias</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Aptitudes & Dominio</h2>
+                <p class="text-xs sm:text-sm text-sand-800 font-light">
+                    Habilidades cuantitativas, de liderazgo interpersonal e idiomas.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Business Analytics -->
-                <div class="clean-card p-6 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold text-primary-700 uppercase">Analítica</span>
-                    <h3 class="text-base font-display font-bold text-slate-900">Business Intelligence</h3>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Análisis de Procesos</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Interpretación de KPIs</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Toma de Decisiones Estratégicas</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Enfoque Data-Driven</li>
+                <!-- Business Intelligence -->
+                <div class="editorial-card p-7 rounded-2xl space-y-3">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">Analítica</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Business Analytics</h3>
+                    <ul class="space-y-2 text-xs text-sand-800 font-light pt-2">
+                        <li>• Inteligencia de Negocios</li>
+                        <li>• Análisis de Procesos</li>
+                        <li>• Interpretación de Métricas & KPIs</li>
+                        <li>• Enfoque Data-Driven</li>
                     </ul>
                 </div>
 
                 <!-- Fortalezas Blandas -->
-                <div class="clean-card p-6 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold text-primary-700 uppercase">Gestión</span>
-                    <h3 class="text-base font-display font-bold text-slate-900">Habilidades Blandas</h3>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Organización del Tiempo</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Creatividad y Solución Práctica</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Consistencia & Perseverancia</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Sentido de Responsabilidad</li>
+                <div class="editorial-card p-7 rounded-2xl space-y-3">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">Gestión</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Fortalezas Clave</h3>
+                    <ul class="space-y-2 text-xs text-sand-800 font-light pt-2">
+                        <li>• Organización & Gestión del Tiempo</li>
+                        <li>• Creatividad e Innovación</li>
+                        <li>• Consistencia & Perseverancia</li>
+                        <li>• Alto Sentido de Responsabilidad</li>
                     </ul>
                 </div>
 
                 <!-- Idiomas -->
-                <div class="clean-card p-6 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold text-primary-700 uppercase">Comunicación</span>
-                    <h3 class="text-base font-display font-bold text-slate-900">Idiomas</h3>
-                    <div class="space-y-3 pt-1 text-xs">
+                <div class="editorial-card p-7 rounded-2xl space-y-3">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">Idiomas</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Comunicación</h3>
+                    <div class="space-y-4 pt-2 text-xs">
                         <div>
-                            <div class="flex justify-between font-semibold text-slate-800 mb-1">
+                            <div class="flex justify-between text-charcoal-900 font-medium mb-1">
                                 <span>Español</span>
-                                <span class="text-slate-500">Nativo</span>
+                                <span class="text-sand-600 text-[10px] uppercase">Nativo</span>
                             </div>
-                            <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-slate-900 h-full w-full"></div>
+                            <div class="w-full bg-sand-200 h-1 rounded-full overflow-hidden">
+                                <div class="bg-charcoal-900 h-full w-full"></div>
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between font-semibold text-slate-800 mb-1">
+                            <div class="flex justify-between text-charcoal-900 font-medium mb-1">
                                 <span>Inglés</span>
-                                <span class="text-slate-500">Fluido / Profesional</span>
+                                <span class="text-sand-600 text-[10px] uppercase">Fluido / Académico</span>
                             </div>
-                            <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-slate-900 h-full w-5/6"></div>
+                            <div class="w-full bg-sand-200 h-1 rounded-full overflow-hidden">
+                                <div class="bg-charcoal-900 h-full w-5/6"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Intereses & Estilo -->
-                <div class="clean-card p-6 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold text-primary-700 uppercase">Equilibrio</span>
-                    <h3 class="text-base font-display font-bold text-slate-900">Intereses & Bienestar</h3>
-                    <ul class="space-y-2 text-xs text-slate-600">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Danza e Instrucción</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Gimnasio & Acondicionamiento</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Networking y Dinamismo Social</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-slate-900"></i> Música y Expresión Artística</li>
+                <div class="editorial-card p-7 rounded-2xl space-y-3">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-terracotta-600 block">Estilo de Vida</span>
+                    <h3 class="font-serif text-2xl text-charcoal-900 font-normal">Intereses</h3>
+                    <ul class="space-y-2 text-xs text-sand-800 font-light pt-2">
+                        <li>• Danza y Pedagogía Corporal</li>
+                        <li>• Fitness, Pilates & Caminatas</li>
+                        <li>• Convivencia & Networking</li>
+                        <li>• Música & Creatividad</li>
                     </ul>
                 </div>
 
@@ -522,45 +465,47 @@
         </div>
     </section>
 
-    <!-- Sección 5: Visión Estratégica & Proyecto de Emprendimiento -->
-    <section id="proyectos" class="py-20 px-6 bg-white border-b border-slate-200/60">
-        <div class="max-w-6xl mx-auto space-y-12">
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section V: Visión & Emprendimiento (El Estudio Boutique) -->
+    <section id="vision" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-16">
             
-            <div class="max-w-2xl space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Proyección & Negocios</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Visión y Proyectos Futuros</h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Plan integral que conjuga titulación en Business Intelligence, proyección internacional y la creación de un estudio boutique.
+            <div class="max-w-xl space-y-2">
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block">05 / Visión de Futuro</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Proyecto de Emprendimiento</h2>
+                <p class="text-xs sm:text-sm text-sand-800 font-light">
+                    La fusión de la analítica de negocios con la docencia del movimiento.
                 </p>
             </div>
 
-            <!-- Spotlight Card: Emprendimiento Estudio Pilates & Danza -->
-            <div class="p-8 sm:p-10 rounded-2xl bg-slate-900 text-white space-y-6 shadow-xl">
-                <div class="flex items-center gap-2 text-xs font-semibold text-slate-300">
-                    <span class="w-2 h-2 rounded-full bg-rosewood-600"></span>
-                    <span>Proyecto de Emprendimiento e Innovación</span>
+            <!-- Spotlight Card -->
+            <div class="p-8 sm:p-12 rounded-3xl bg-charcoal-900 text-sand-50 space-y-8 shadow-xl">
+                <div class="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] font-semibold text-terracotta-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta-500"></span>
+                    <span>Emprendimiento en Bienestar & Fitness</span>
                 </div>
-                
-                <h3 class="text-2xl sm:text-3xl font-display font-bold text-white max-w-2xl leading-snug">
-                    Estudio Boutique de Danza & Pilates: Gestión por Datos y Docencia Directa
+
+                <h3 class="font-serif text-3xl sm:text-5xl font-normal leading-tight text-white max-w-2xl">
+                    Estudio Boutique de Danza & Pilates
                 </h3>
 
-                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
-                    Creación y dirección de un centro boutique de movimiento consciente y entrenamiento funcional. El modelo integra la analítica de Business Intelligence para la optimización de capacidad, control financiero y experiencia personalizada, con la impartición directa de sesiones por parte de Natalia como instructora.
+                <p class="text-xs sm:text-sm text-sand-200 font-light leading-relaxed max-w-3xl">
+                    Creación y dirección de un espacio boutique enfocado en la salud integral y el movimiento consciente. El modelo de negocio aplica herramientas de <em>Business Intelligence</em> para la optimización de capacidad, control financiero y experiencia personalizada, con la impartición y docencia directa de Natalia como instructora.
                 </p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
-                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50">
-                        <span class="block font-bold text-sm text-white mb-1">🎓 Doble Titulación</span>
-                        <p class="text-xs text-slate-400">Ampliar la formación universitaria en BI con acreditación internacional.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-charcoal-800 text-xs">
+                    <div class="space-y-1">
+                        <span class="font-serif text-xl text-white font-normal block">Doble Titulación</span>
+                        <p class="text-sand-400 font-light">Proyección internacional y maestría en análisis de negocio.</p>
                     </div>
-                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50">
-                        <span class="block font-bold text-sm text-white mb-1">📊 Analítica Aplicada</span>
-                        <p class="text-xs text-slate-400">Uso de métricas e inteligencia de negocios para escala y rentabilidad.</p>
+                    <div class="space-y-1">
+                        <span class="font-serif text-xl text-white font-normal block">Gestión Data-Driven</span>
+                        <p class="text-sand-400 font-light">Aplicación de analítica para la retención y rentabilidad del estudio.</p>
                     </div>
-                    <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50">
-                        <span class="block font-bold text-sm text-white mb-1">🧘 Docencia e Instrucción</span>
-                        <p class="text-xs text-slate-400">Dirección formativa presencial y fomento del bienestar integral.</p>
+                    <div class="space-y-1">
+                        <span class="font-serif text-xl text-white font-normal block">Docencia & Dirección</span>
+                        <p class="text-sand-400 font-light">Impartición directa de clases y formación de una comunidad activa.</p>
                     </div>
                 </div>
             </div>
@@ -568,71 +513,71 @@
         </div>
     </section>
 
-    <!-- Sección 6: Contacto Directo -->
-    <section id="contacto" class="py-20 px-6 bg-slate-50">
-        <div class="max-w-4xl mx-auto space-y-12">
+    <div class="max-w-5xl mx-auto px-6"><div class="line-accent"></div></div>
+
+    <!-- Section VI: Contacto Directo -->
+    <section id="contacto" class="py-24 px-6 bg-[#F5EFE6]/50">
+        <div class="max-w-4xl mx-auto space-y-16">
             
-            <div class="text-center space-y-2">
-                <span class="text-xs font-bold text-primary-700 uppercase tracking-wider">Contacto</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Iniciemos una conversación</h2>
-                <p class="text-slate-600 text-sm sm:text-base max-w-md mx-auto">
-                    Disponible para proyectos de Business Intelligence, iniciativas sociales y oportunidades profesionales.
+            <div class="text-center space-y-3">
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-terracotta-600 block">06 / Contacto</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal text-charcoal-900">Iniciemos una conversación</h2>
+                <p class="text-xs sm:text-sm text-sand-800 font-light max-w-md mx-auto">
+                    Abierta a colaboraciones académicas, proyectos en Business Intelligence y propuestas profesionales.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Contact Methods -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Email Card -->
-                <a href="mailto:natalia.ortega1338@gmail.com" class="clean-card p-6 rounded-2xl text-center space-y-2 block group">
-                    <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-base group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                <a href="mailto:natalia.ortega1338@gmail.com" class="editorial-card p-8 rounded-2xl text-center space-y-2 block group">
+                    <div class="w-10 h-10 mx-auto rounded-full bg-sand-200/80 text-charcoal-900 flex items-center justify-center text-sm group-hover:bg-charcoal-900 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <span class="block font-display font-bold text-sm text-slate-900">Correo Electrónico</span>
-                    <span class="text-xs text-primary-700 font-medium break-all">natalia.ortega1338@gmail.com</span>
+                    <span class="font-serif text-xl text-charcoal-900 block font-normal">Correo</span>
+                    <span class="text-xs text-terracotta-700 font-medium break-all">natalia.ortega1338@gmail.com</span>
                 </a>
 
-                <!-- Phone Card -->
-                <a href="tel:7776531326" class="clean-card p-6 rounded-2xl text-center space-y-2 block group">
-                    <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-base group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                <a href="tel:7776531326" class="editorial-card p-8 rounded-2xl text-center space-y-2 block group">
+                    <div class="w-10 h-10 mx-auto rounded-full bg-sand-200/80 text-charcoal-900 flex items-center justify-center text-sm group-hover:bg-charcoal-900 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-phone"></i>
                     </div>
-                    <span class="block font-display font-bold text-sm text-slate-900">Teléfono / WhatsApp</span>
-                    <span class="text-xs text-slate-600 font-medium">+52 777 653 1326</span>
+                    <span class="font-serif text-xl text-charcoal-900 block font-normal">Teléfono</span>
+                    <span class="text-xs text-sand-800 font-medium">+52 777 653 1326</span>
                 </a>
 
-                <!-- Location Card -->
-                <div class="clean-card p-6 rounded-2xl text-center space-y-2">
-                    <div class="w-10 h-10 mx-auto rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-base">
+                <div class="editorial-card p-8 rounded-2xl text-center space-y-2">
+                    <div class="w-10 h-10 mx-auto rounded-full bg-sand-200/80 text-charcoal-900 flex items-center justify-center text-sm">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <span class="block font-display font-bold text-sm text-slate-900">Ubicación</span>
-                    <span class="text-xs text-slate-600 font-medium">CDMX, México</span>
+                    <span class="font-serif text-xl text-charcoal-900 block font-normal">Ubicación</span>
+                    <span class="text-xs text-sand-800 font-medium">CDMX, México</span>
                 </div>
 
             </div>
 
-            <!-- Clean Message Composer Form -->
-            <div class="clean-card p-8 rounded-2xl space-y-5">
-                <h3 class="text-base font-display font-bold text-slate-900 text-center">Enviar Mensaje Rápido</h3>
+            <!-- Form -->
+            <div class="editorial-card p-8 sm:p-10 rounded-2xl space-y-6">
+                <h3 class="font-serif text-2xl text-charcoal-900 text-center font-normal">Redactar Mensaje Directo</h3>
                 
                 <form onsubmit="event.preventDefault(); window.location.href='mailto:natalia.ortega1338@gmail.com?subject=Contacto desde Portafolio - ' + encodeURIComponent(document.getElementById('sender-name').value) + '&body=' + encodeURIComponent(document.getElementById('sender-msg').value);" class="space-y-4">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="sender-name" class="block text-xs font-semibold text-slate-600 mb-1">Nombre</label>
-                            <input type="text" id="sender-name" required placeholder="Tu nombre" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 transition-all">
+                            <label for="sender-name" class="block text-[10px] uppercase tracking-[0.18em] font-semibold text-sand-700 mb-1">Nombre</label>
+                            <input type="text" id="sender-name" required placeholder="Tu nombre completo" class="w-full px-4 py-3 rounded-xl bg-sand-50 border border-sand-300 text-xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-900 transition-all">
                         </div>
                         <div>
-                            <label for="sender-email" class="block text-xs font-semibold text-slate-600 mb-1">Correo Electrónico</label>
-                            <input type="email" id="sender-email" required placeholder="tu@correo.com" class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 transition-all">
+                            <label for="sender-email" class="block text-[10px] uppercase tracking-[0.18em] font-semibold text-sand-700 mb-1">Correo</label>
+                            <input type="email" id="sender-email" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-xl bg-sand-50 border border-sand-300 text-xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-900 transition-all">
                         </div>
                     </div>
                     <div>
-                        <label for="sender-msg" class="block text-xs font-semibold text-slate-600 mb-1">Mensaje</label>
-                        <textarea id="sender-msg" rows="3" required placeholder="Hola Natalia, me comunico respecto a..." class="w-full px-4 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 transition-all"></textarea>
+                        <label for="sender-msg" class="block text-[10px] uppercase tracking-[0.18em] font-semibold text-sand-700 mb-1">Mensaje</label>
+                        <textarea id="sender-msg" rows="3" required placeholder="Hola Natalia, me gustaría contactarte para..." class="w-full px-4 py-3 rounded-xl bg-sand-50 border border-sand-300 text-xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-900 transition-all"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs tracking-wide transition-colors flex items-center justify-center gap-2">
+                    <button type="submit" class="w-full py-3.5 rounded-full bg-charcoal-900 hover:bg-terracotta-600 text-sand-50 text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2">
                         <i class="fa-regular fa-paper-plane text-xs"></i>
-                        <span>Redactar en mi Cliente de Correo</span>
+                        <span>Enviar Mensaje</span>
                     </button>
                 </form>
             </div>
@@ -641,9 +586,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 bg-white border-t border-slate-200 text-center text-xs text-slate-500 space-y-1">
-        <p>© 2026 Natalia Ortega López. Todos los derechos reservados.</p>
-        <p class="text-slate-400">Universidad Panamericana • Licenciatura en Business Intelligence</p>
+    <footer class="py-12 px-6 bg-[#FAF7F2] border-t border-sand-200 text-center space-y-2">
+        <span class="font-serif text-2xl text-charcoal-900 font-normal">Natalia Ortega López</span>
+        <p class="text-[11px] uppercase tracking-[0.2em] text-sand-600">Universidad Panamericana • Business Intelligence</p>
+        <p class="text-[10px] text-sand-500 pt-2">© 2026 Todos los derechos reservados.</p>
     </footer>
 
     <!-- Mobile Menu Script -->
