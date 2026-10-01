@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalia Ortega López — Portafolio & CV Digital</title>
-    <meta name="description" content="CV digital y portafolio interactivo de Natalia Ortega López. Estudiante de Business Intelligence en Universidad Panamericana.">
+    <title>Natalia Ortega López — Business Intelligence & Portfolio</title>
+    <meta name="description" content="Portafolio profesional de Natalia Ortega López. Business Intelligence en Universidad Panamericana. Analítica de datos, disciplina artística y emprendimiento.">
     
-    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,33 +21,22 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Outfit"', 'sans-serif'],
                     },
                     colors: {
-                        notion: {
-                            bg: '#FFFFFF',
-                            sidebar: '#F7F7F5',
-                            hover: '#EFEFED',
-                            border: '#E9E9E7',
-                            text: '#37352F',
-                            muted: '#787774',
-                            lightText: '#9B9A97'
+                        dark: {
+                            base: '#050505',
+                            card: '#0D0D0D',
+                            cardHover: '#141414',
+                            border: '#1F1F1F',
+                            borderHover: '#333333',
+                            muted: '#888888',
                         },
-                        tag: {
-                            blue: '#E0E8F6',
-                            blueText: '#2B579A',
-                            purple: '#EAE4F2',
-                            purpleText: '#5A32A3',
-                            pink: '#F5E0E9',
-                            pinkText: '#9E2A59',
-                            green: '#DBEDDB',
-                            greenText: '#1E5E3A',
-                            yellow: '#FDECC8',
-                            yellowText: '#8F6300',
-                            orange: '#FAEBDD',
-                            orangeText: '#894611',
-                            gray: '#E3E2E0',
-                            grayText: '#32302C',
+                        accent: {
+                            white: '#FFFFFF',
+                            silver: '#E4E4E7',
+                            glow: 'rgba(255, 255, 255, 0.08)'
                         }
                     }
                 }
@@ -57,506 +46,548 @@
     
     <style>
         body {
-            background-color: #F7F6F3;
-            color: #37352F;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #050505;
+            color: #E4E4E7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            selection-background-color: #FFFFFF;
+            selection-color: #000000;
         }
-        .notion-callout {
-            background-color: #F7F7F5;
-            border-left: 3px solid #37352F;
-        }
-        .notion-tab.active {
-            border-bottom: 2px solid #37352F;
-            color: #37352F;
-            font-weight: 600;
-        }
-        .notion-card {
+        ::selection {
             background: #FFFFFF;
-            border: 1px solid #E9E9E7;
-            border-radius: 8px;
-            transition: all 0.15s ease-in-out;
+            color: #000000;
         }
-        .notion-card:hover {
-            border-color: #D3D1CB;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        .black-card {
+            background: #0D0D0D;
+            border: 1px solid #1F1F1F;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .black-card:hover {
+            background: #121212;
+            border-color: #383838;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px 1px rgba(255, 255, 255, 0.03);
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.2));
+            border-radius: 17px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .tag-dark {
+            background: #141414;
+            color: #D4D4D8;
+            border: 1px solid #242424;
         }
     </style>
 </head>
-<body class="py-6 sm:py-10 px-3 sm:px-6">
+<body class="bg-[#050505] text-[#E4E4E7] antialiased overflow-x-hidden">
 
-    <!-- Notion Page Wrapper -->
-    <main class="max-w-4xl mx-auto bg-white border border-[#E9E9E7] rounded-xl shadow-sm overflow-hidden">
-        
-        <!-- Notion Cover Banner -->
-        <div class="h-44 sm:h-56 w-full bg-gradient-to-r from-[#E0E8F6] via-[#EAE4F2] to-[#F5E0E9] relative">
-            <div class="absolute top-4 right-4 flex gap-2">
-                <button onclick="copyCurrentLink()" class="px-3 py-1.5 bg-white/80 hover:bg-white backdrop-blur-sm text-xs font-medium text-[#37352F] rounded-md border border-white/60 shadow-xs flex items-center gap-1.5 transition-all">
-                    <i class="fa-regular fa-clone text-[11px]"></i>
-                    <span id="copy-btn-text">Copiar Enlace</span>
-                </button>
-                <button onclick="window.print()" class="px-3 py-1.5 bg-white/80 hover:bg-white backdrop-blur-sm text-xs font-medium text-[#37352F] rounded-md border border-white/60 shadow-xs flex items-center gap-1.5 transition-all">
-                    <i class="fa-solid fa-print text-[11px]"></i>
-                    <span>Imprimir / PDF</span>
+    <!-- Top Minimalist Banner -->
+    <div class="border-b border-[#1A1A1A] bg-[#0A0A0A] py-2 px-4 text-center text-[11px] font-medium tracking-widest text-[#888888] uppercase">
+        Universidad Panamericana • Business Intelligence • Ciudad de México
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#050505]/85 backdrop-blur-xl border-b border-[#1A1A1A]">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center font-display font-extrabold text-sm tracking-wider group-hover:scale-105 transition-transform">
+                    NO
+                </div>
+                <div>
+                    <span class="font-display font-bold text-base text-white tracking-tight block">Natalia Ortega López</span>
+                    <span class="text-[10px] font-medium text-[#71717A] tracking-wider uppercase block">Business Intelligence</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-[#888888]">
+                <a href="#perfil" class="hover:text-white transition-colors">Perfil</a>
+                <a href="#academico" class="hover:text-white transition-colors">Formación</a>
+                <a href="#trayectoria" class="hover:text-white transition-colors">Danza & Misiones</a>
+                <a href="#habilidades" class="hover:text-white transition-colors">Competencias</a>
+                <a href="#vision" class="hover:text-white transition-colors">Emprendimiento</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#E4E4E7] text-black text-xs font-bold uppercase tracking-wider transition-all shadow-sm">
+                    <span>Contactar</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl border border-[#262626] flex items-center justify-center text-white hover:bg-[#141414]">
+                    <i class="fa-solid fa-bars text-sm"></i>
                 </button>
             </div>
         </div>
 
-        <div class="px-6 sm:px-12 pb-12">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-6 bg-[#0A0A0A] border-b border-[#1F1F1F] space-y-4 text-xs uppercase tracking-widest font-semibold text-[#888888]">
+            <a href="#perfil" class="block py-1 text-white">Perfil & Valores</a>
+            <a href="#academico" class="block py-1 text-white">Formación Académica</a>
+            <a href="#trayectoria" class="block py-1 text-white">Danza & Misiones</a>
+            <a href="#habilidades" class="block py-1 text-white">Competencias & Idiomas</a>
+            <a href="#vision" class="block py-1 text-white">Emprendimiento</a>
+            <a href="#contacto" class="block py-1 text-white font-bold border-t border-[#1F1F1F] pt-3">Contacto Directo</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-20 pb-28 px-6 relative">
+        <div class="max-w-6xl mx-auto space-y-16">
             
-            <!-- Avatar & Header Header -->
-            <div class="relative -mt-14 mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div class="flex items-end gap-4">
-                    <div class="w-24 h-24 rounded-2xl bg-white border-2 border-white shadow-md flex items-center justify-center text-4xl select-none">
-                        👩🏻‍💼
-                    </div>
-                    <div>
-                        <h1 class="text-2xl sm:text-3xl font-bold text-[#37352F] tracking-tight">
-                            Natalia Ortega López
-                        </h1>
-                        <p class="text-sm text-[#787774] font-medium mt-0.5">
-                            Business Intelligence • Danza & Deporte • Emprendimiento
-                        </p>
-                    </div>
+            <div class="text-center space-y-6 max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#121212] border border-[#262626] text-xs uppercase tracking-widest text-[#D4D4D8] font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Estudiante de Business Intelligence • Universidad Panamericana
                 </div>
 
-                <!-- Quick Action Buttons -->
-                <div class="flex items-center gap-2">
-                    <a href="mailto:natalia.ortega1338@gmail.com" class="px-4 py-2 bg-[#37352F] hover:bg-[#201F1D] text-white text-xs font-semibold rounded-md shadow-xs flex items-center gap-1.5 transition-all">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-[1.08]">
+                    Analítica estratégica, <br class="hidden sm:inline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#E4E4E7] to-[#71717A]">
+                        disciplina y visión de impacto.
+                    </span>
+                </h1>
+
+                <p class="text-sm sm:text-base text-[#A1A1AA] max-w-2xl mx-auto leading-relaxed font-normal">
+                    Soy <strong class="text-white font-semibold">Natalia Ortega López</strong>. Integro el pensamiento analítico de la Inteligencia de Negocios con la perseverancia adquirida en más de doce años de danza y un firme compromiso social y ético.
+                </p>
+
+                <!-- Actions -->
+                <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <a href="#contacto" class="px-7 py-3.5 rounded-full bg-white hover:bg-[#E4E4E7] text-black text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-white/5">
                         <i class="fa-regular fa-envelope"></i>
-                        <span>Contactar</span>
+                        <span>Iniciar Contacto</span>
                     </a>
-                    <a href="tel:7776531326" class="px-4 py-2 bg-[#F7F7F5] hover:bg-[#EFEFED] text-[#37352F] text-xs font-medium rounded-md border border-[#E9E9E7] flex items-center gap-1.5 transition-all">
-                        <i class="fa-solid fa-phone text-xs"></i>
-                        <span>Llamar</span>
+                    <a href="#perfil" class="px-7 py-3.5 rounded-full bg-[#121212] hover:bg-[#1A1A1A] text-white text-xs font-bold uppercase tracking-wider border border-[#262626] transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                        <span>Explorar Perfil</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Notion Properties Grid (Table View) -->
-            <div class="bg-[#F7F7F5] border border-[#E9E9E7] rounded-lg p-4 mb-8 text-xs space-y-2.5">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-solid fa-graduation-cap text-[11px]"></i> Carrera:
-                        </span>
-                        <span class="font-medium text-[#37352F]">Business Intelligence (1.er Sem)</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-solid fa-building-columns text-[11px]"></i> Universidad:
-                        </span>
-                        <span class="font-medium text-[#37352F]">Universidad Panamericana (Mixcoac)</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-solid fa-location-dot text-[11px]"></i> Ubicación:
-                        </span>
-                        <span class="font-medium text-[#37352F]">Ciudad de México, México</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-solid fa-language text-[11px]"></i> Idiomas:
-                        </span>
-                        <span class="flex gap-1.5">
-                            <span class="px-2 py-0.5 rounded bg-[#E0E8F6] text-[#2B579A] text-[11px] font-medium">Español</span>
-                            <span class="px-2 py-0.5 rounded bg-[#EAE4F2] text-[#5A32A3] text-[11px] font-medium">Inglés</span>
-                        </span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-regular fa-envelope text-[11px]"></i> Correo:
-                        </span>
-                        <a href="mailto:natalia.ortega1338@gmail.com" class="font-medium text-[#2B579A] hover:underline">
-                            natalia.ortega1338@gmail.com
-                        </a>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-28 text-[#787774] flex items-center gap-1.5">
-                            <i class="fa-solid fa-phone text-[11px]"></i> Teléfono:
-                        </span>
-                        <span class="font-medium text-[#37352F]">+52 777 653 1326</span>
-                    </div>
+            <!-- Bento Grid Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                <div class="black-card p-6 text-center">
+                    <span class="block text-3xl sm:text-4xl font-display font-bold text-white">+12</span>
+                    <span class="text-xs text-[#888888] uppercase tracking-wider font-semibold mt-1 block">Años en Danza</span>
+                </div>
+                <div class="black-card p-6 text-center">
+                    <span class="block text-3xl sm:text-4xl font-display font-bold text-white">UP</span>
+                    <span class="text-xs text-[#888888] uppercase tracking-wider font-semibold mt-1 block">Campus Mixcoac</span>
+                </div>
+                <div class="black-card p-6 text-center">
+                    <span class="block text-3xl sm:text-4xl font-display font-bold text-white">2</span>
+                    <span class="text-xs text-[#888888] uppercase tracking-wider font-semibold mt-1 block">Idiomas</span>
+                </div>
+                <div class="black-card p-6 text-center">
+                    <span class="block text-3xl sm:text-4xl font-display font-bold text-white">100%</span>
+                    <span class="text-xs text-[#888888] uppercase tracking-wider font-semibold mt-1 block">Compromiso</span>
                 </div>
             </div>
 
-            <!-- Navigation Tabs (Notion View Switcher) -->
-            <div class="border-b border-[#E9E9E7] flex gap-6 text-xs text-[#787774] mb-8 overflow-x-auto">
-                <button onclick="switchTab('resumen')" id="tab-resumen" class="notion-tab active pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>📋 Resumen & Perfil</span>
-                </button>
-                <button onclick="switchTab('academico')" id="tab-academico" class="notion-tab pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>🎓 Formación</span>
-                </button>
-                <button onclick="switchTab('experiencia')" id="tab-experiencia" class="notion-tab pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>🩰 Danza & Misiones</span>
-                </button>
-                <button onclick="switchTab('habilidades')" id="tab-habilidades" class="notion-tab pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>📊 Habilidades</span>
-                </button>
-                <button onclick="switchTab('vision')" id="tab-vision" class="notion-tab pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>🚀 Emprendimiento</span>
-                </button>
-                <button onclick="switchTab('contacto')" id="tab-contacto" class="notion-tab pb-2 flex items-center gap-1.5 whitespace-nowrap">
-                    <span>📬 Contacto</span>
-                </button>
+        </div>
+    </section>
+
+    <!-- Sección 1: Perfil & Propuesta de Valor -->
+    <section id="perfil" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#080808]">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">01 / Identidad</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Quién soy & Propuesta de Valor</h2>
             </div>
 
-            <!-- TAB 1: RESUMEN & PERFIL -->
-            <div id="content-resumen" class="tab-pane space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Callout: Quién Soy -->
-                <div class="notion-callout p-4 rounded-md text-xs sm:text-sm leading-relaxed space-y-2">
-                    <div class="font-bold text-[#37352F] flex items-center gap-2">
-                        <span>💡</span>
-                        <span>Sobre Mí</span>
+                <!-- Card 1: Quién Soy -->
+                <div class="black-card p-7 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center text-white text-base">
+                        <i class="fa-solid fa-user"></i>
                     </div>
-                    <p class="text-[#37352F]">
-                        Soy <strong>Natalia</strong>, estudiante de <strong>Business Intelligence</strong> en la <em>Universidad Panamericana</em>. Mis mayores fortalezas son mi <strong>creatividad, mi organización, y mi consistencia y perseverancia</strong>. Me considero una persona responsable y dinámica, que valora el equilibrio entre la excelencia académica, el deporte de alto rendimiento y el tiempo de calidad.
+                    <h3 class="text-lg font-display font-bold text-white">¿Quién soy?</h3>
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Me considero una persona responsable, creativa, organizada y perseverante. Me apasiona el aprendizaje continuo y disfruto mantener un estilo de vida dinámico con tiempo de calidad para el deporte y mis proyectos.
                     </p>
                 </div>
 
-                <!-- Callout: Por qué yo -->
-                <div class="p-4 rounded-md border border-[#E9E9E7] bg-white text-xs sm:text-sm leading-relaxed space-y-2">
-                    <div class="font-bold text-[#37352F] flex items-center gap-2">
-                        <span>⭐</span>
-                        <span>¿Por qué yo? (Propuesta de Valor)</span>
+                <!-- Card 2: Valores -->
+                <div class="black-card p-7 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center text-white text-base">
+                        <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <p class="text-[#787774]">
-                        "Soy una persona que destaca por mis <strong class="text-[#37352F]">valores sólidos, mi consistencia y mi responsabilidad</strong>. Combino la mentalidad estructurada de la analítica de negocios con la disciplina y el trabajo en equipo desarrollados a lo largo de más de 12 años de danza y servicio comunitario."
+                    <h3 class="text-lg font-display font-bold text-white">Valores Clave</h3>
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Actúo siempre bajo los principios de <strong>honestidad, empatía, respeto, lealtad, solidaridad y responsabilidad</strong>, aplicándolos con rigor en todo equipo o proyecto en el que participo.
                     </p>
                 </div>
 
-                <!-- Valores Fundamentales (Notion Tags Grid) -->
-                <div>
-                    <h3 class="text-xs font-bold text-[#787774] uppercase tracking-wider mb-3">💎 Valores Fundamentales</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#DBEDDB] text-[#1E5E3A] font-semibold">Honestidad</span>
-                            <span class="text-[#787774] text-[11px]">Ética y claridad</span>
-                        </div>
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#E0E8F6] text-[#2B579A] font-semibold">Empatía</span>
-                            <span class="text-[#787774] text-[11px]">Escucha activa</span>
-                        </div>
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#EAE4F2] text-[#5A32A3] font-semibold">Respeto</span>
-                            <span class="text-[#787774] text-[11px]">Trato digno</span>
-                        </div>
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#FDECC8] text-[#8F6300] font-semibold">Lealtad</span>
-                            <span class="text-[#787774] text-[11px]">Compromiso</span>
-                        </div>
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#FAEBDD] text-[#894611] font-semibold">Solidaridad</span>
-                            <span class="text-[#787774] text-[11px]">Vocación social</span>
-                        </div>
-                        <div class="p-3 rounded-lg border border-[#E9E9E7] bg-[#F7F7F5] flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-[#F5E0E9] text-[#9E2A59] font-semibold">Responsabilidad</span>
-                            <span class="text-[#787774] text-[11px]">Entrega total</span>
-                        </div>
+                <!-- Card 3: Por qué yo -->
+                <div class="black-card p-7 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#1A1A1A] flex items-center justify-center text-white text-base">
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </div>
-
-                <!-- Hobbies & Intereses -->
-                <div class="pt-2">
-                    <h3 class="text-xs font-bold text-[#787774] uppercase tracking-wider mb-3">🎨 Intereses & Hobbies</h3>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="px-3 py-1.5 rounded-md bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">🩰 Bailar & Expresión Artística</span>
-                        <span class="px-3 py-1.5 rounded-md bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">🏋️ Gimnasio & Estilo de Vida Fitness</span>
-                        <span class="px-3 py-1.5 rounded-md bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">🎧 Escuchar Música</span>
-                        <span class="px-3 py-1.5 rounded-md bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">👥 Convivir con amigos y gente nueva</span>
-                        <span class="px-3 py-1.5 rounded-md bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">🌿 Salir a caminar al aire libre</span>
-                    </div>
+                    <h3 class="text-lg font-display font-bold text-white">¿Por qué yo?</h3>
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Aporto una combinación diferenciada de <strong>pensamiento cuantitativo, disciplina forjada en el arte de la danza y sensibilidad humana</strong> para cumplir metas con excelencia.
+                    </p>
                 </div>
 
             </div>
 
-            <!-- TAB 2: FORMACIÓN ACADÉMICA -->
-            <div id="content-academico" class="tab-pane hidden space-y-6">
+            <!-- Valores en badges oscuros -->
+            <div class="p-6 rounded-2xl bg-[#0D0D0D] border border-[#1F1F1F] flex flex-wrap items-center gap-3">
+                <span class="text-xs font-bold text-[#71717A] uppercase tracking-wider mr-2">Valores Fundamentales:</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Honestidad</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Empatía</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Respeto</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Lealtad</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Solidaridad</span>
+                <span class="tag-dark px-3.5 py-1.5 rounded-lg text-xs font-semibold">Responsabilidad</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección 2: Formación Académica -->
+    <section id="academico" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#050505]">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">02 / Trayectoria</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Formación Académica</h2>
+            </div>
+
+            <div class="space-y-6">
                 
                 <!-- UP -->
-                <div class="notion-card p-5 space-y-3">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xl">🎓</span>
-                            <div>
-                                <h3 class="text-sm sm:text-base font-bold text-[#37352F]">Licenciatura en Business Intelligence</h3>
-                                <p class="text-xs text-[#787774]">Universidad Panamericana • Campus Mixcoac, CDMX</p>
-                            </div>
+                <div class="black-card p-8 sm:p-10 space-y-4 glow-border">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#1F1F1F] pb-4">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider font-bold text-emerald-400 block mb-1">Licenciatura • En Curso (1.ᵉʳ Semestre)</span>
+                            <h3 class="text-2xl sm:text-3xl font-display font-bold text-white">Business Intelligence (Inteligencia de Negocios)</h3>
                         </div>
-                        <span class="px-2.5 py-1 rounded bg-[#DBEDDB] text-[#1E5E3A] text-xs font-semibold self-start sm:self-auto">
-                            En curso • 1.er Semestre
-                        </span>
+                        <span class="text-xs font-semibold text-[#888888] uppercase tracking-wider">2026 — Presente</span>
                     </div>
-                    <p class="text-xs text-[#787774] leading-relaxed">
-                        Formación integral en analítica de datos, modelado de negocios, optimización de decisiones estratégicas, estadísticas aplicadas y transformación digital corporativa.
+
+                    <p class="text-xs sm:text-sm font-semibold text-[#D4D4D8]">
+                        Universidad Panamericana — Campus Mixcoac, Ciudad de México
                     </p>
-                    <div class="flex flex-wrap gap-2 pt-1 text-xs">
-                        <span class="px-2 py-0.5 rounded bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">Analítica Cuantitativa</span>
-                        <span class="px-2 py-0.5 rounded bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">Estrategia Empresarial</span>
-                        <span class="px-2 py-0.5 rounded bg-[#E0E8F6] text-[#2B579A] font-medium">Meta: Doble Titulación Internacional</span>
+
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Desarrollo de competencias en modelado de información, analítica de datos, estadísticas, optimización estratégica y toma de decisiones corporativas.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="tag-dark px-3 py-1 rounded-md">Analítica de Datos</span>
+                        <span class="tag-dark px-3 py-1 rounded-md">Estrategia Empresarial</span>
+                        <span class="tag-dark px-3 py-1 rounded-md text-white font-semibold">Plan de Doble Titulación Internacional</span>
                     </div>
                 </div>
 
                 <!-- La Salle -->
-                <div class="notion-card p-5 space-y-3">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xl">🏫</span>
-                            <div>
-                                <h3 class="text-sm sm:text-base font-bold text-[#37352F]">Bachillerato General</h3>
-                                <p class="text-xs text-[#787774]">Universidad La Salle (Preparatoria)</p>
-                            </div>
+                <div class="black-card p-8 sm:p-10 space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#1F1F1F] pb-4">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider font-bold text-[#888888] block mb-1">Educación Media Superior • Concluido</span>
+                            <h3 class="text-2xl sm:text-3xl font-display font-bold text-white">Bachillerato General</h3>
                         </div>
-                        <span class="px-2.5 py-1 rounded bg-[#E3E2E0] text-[#32302C] text-xs font-semibold self-start sm:self-auto">
-                            Concluido
-                        </span>
+                        <span class="text-xs font-semibold text-[#888888] uppercase tracking-wider">La Salle</span>
                     </div>
-                    <p class="text-xs text-[#787774] leading-relaxed">
-                        Formación media superior con enfoque humanista y comunitario. Participación destacada como integrante del Grupo Representativo de Danza escolar.
+
+                    <p class="text-xs sm:text-sm font-semibold text-[#D4D4D8]">
+                        Universidad La Salle (Preparatoria)
                     </p>
-                    <div class="flex flex-wrap gap-2 pt-1 text-xs">
-                        <span class="px-2 py-0.5 rounded bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">Grupo Representativo de Danza</span>
-                        <span class="px-2 py-0.5 rounded bg-[#F7F7F5] border border-[#E9E9E7] text-[#37352F]">Formación en Valores</span>
+
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Formación integral basada en valores humanos y excelencia. Participación activa como integrante del Grupo Representativo de Danza escolar.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="tag-dark px-3 py-1 rounded-md">Grupo Representativo de Danza</span>
+                        <span class="tag-dark px-3 py-1 rounded-md">Formación Comunitaria</span>
                     </div>
                 </div>
 
             </div>
 
-            <!-- TAB 3: DANZA & MISIONES -->
-            <div id="content-experiencia" class="tab-pane hidden space-y-6">
+        </div>
+    </section>
+
+    <!-- Sección 3: Danza & Misiones -->
+    <section id="trayectoria" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#080808]">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">03 / Disciplina & Servicio</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Danza, Deporte & Misiones</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Danza -->
-                <div class="notion-card p-5 space-y-3">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xl">🩰</span>
-                        <div>
-                            <h3 class="text-sm sm:text-base font-bold text-[#37352F]">Trayectoria en Danza & Acondicionamiento</h3>
-                            <p class="text-xs text-[#787774]">Formación continua desde los 6 años (+12 años de práctica)</p>
-                        </div>
+                <div class="black-card p-8 sm:p-10 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-person-running"></i>
                     </div>
-                    <p class="text-xs text-[#787774] leading-relaxed">
-                        La danza ha sido mi escuela fundamental de <strong>disciplina, constancia, memoria y trabajo en sincronía</strong>. He formado parte de grupos representativos y mantengo un estilo de vida saludable enfocado en gimnasio, bienestar y pilates.
+                    <div>
+                        <span class="text-[11px] uppercase tracking-wider font-bold text-[#888888] block">Desde los 6 años • Grupo Representativo</span>
+                        <h3 class="text-2xl font-display font-bold text-white mt-1">Danza & Vida Deportiva</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Más de doce años de entrenamiento continuo en danza han forjado mi perseverancia, memoria coreográfica y capacidad para rendir bajo presión. Mantengo una rutina regular de entrenamiento de fuerza en gimnasio y acondicionamiento.
                     </p>
-                    <ul class="text-xs text-[#37352F] space-y-1 pt-1 list-disc list-inside">
-                        <li>Grupo representativo escolar de danza.</li>
-                        <li>Memoria coreográfica y manejo de presión en escenario.</li>
-                        <li>Hábitos diarios de consistencia y superación personal.</li>
-                    </ul>
+                    <div class="pt-2 border-t border-[#1F1F1F] flex flex-wrap gap-2 text-xs text-[#888888]">
+                        <span>• Resistencia física</span>
+                        <span>• Coordinación y enfoque</span>
+                        <span>• Trabajo en equipo</span>
+                    </div>
                 </div>
 
                 <!-- Misiones -->
-                <div class="notion-card p-5 space-y-3">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xl">🤝</span>
-                        <div>
-                            <h3 class="text-sm sm:text-base font-bold text-[#37352F]">Grupos Misioneros & Acción Social</h3>
-                            <p class="text-xs text-[#787774]">1 año de participación activa y directa en comunidades</p>
-                        </div>
+                <div class="black-card p-8 sm:p-10 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-[#1A1A1A] flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
                     </div>
-                    <p class="text-xs text-[#787774] leading-relaxed">
-                        Experiencia en trabajo social comunitario, impartición de talleres y apoyo en campo. Esta vivencia reforzó mi vocación de servicio, empatía, escucha activa y liderazgo sensible.
+                    <div>
+                        <span class="text-[11px] uppercase tracking-wider font-bold text-[#888888] block">1 Año Continuo de Servicio</span>
+                        <h3 class="text-2xl font-display font-bold text-white mt-1">Grupos Misioneros & Acción Social</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
+                        Trabajo directo en campo apoyando a comunidades, organizando talleres y dinámicas participativas. Esta experiencia fortaleció mi empatía, escucha activa y liderazgo social.
                     </p>
-                    <div class="flex flex-wrap gap-2 pt-1 text-xs">
-                        <span class="px-2 py-0.5 rounded bg-[#DBEDDB] text-[#1E5E3A]">Sensibilidad Social</span>
-                        <span class="px-2 py-0.5 rounded bg-[#E0E8F6] text-[#2B579A]">Liderazgo Colaborativo</span>
-                        <span class="px-2 py-0.5 rounded bg-[#FDECC8] text-[#8F6300]">Trabajo en Equipo</span>
+                    <div class="pt-2 border-t border-[#1F1F1F] flex flex-wrap gap-2 text-xs text-[#888888]">
+                        <span>• Empatía profunda</span>
+                        <span>• Liderazgo colaborativo</span>
+                        <span>• Vocación de servicio</span>
                     </div>
-                </div>
-
-            </div>
-
-            <!-- TAB 4: HABILIDADES -->
-            <div id="content-habilidades" class="tab-pane hidden space-y-6">
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    
-                    <!-- Business Analytics -->
-                    <div class="notion-card p-4 space-y-2.5">
-                        <h4 class="text-xs font-bold text-[#37352F] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>📊</span> Business Intelligence
-                        </h4>
-                        <ul class="text-xs text-[#787774] space-y-1.5">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#1E5E3A]"></i> Analítica y Modelado de Datos</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#1E5E3A]"></i> Estrategia y Toma de Decisiones</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#1E5E3A]"></i> Interpretación de KPIs</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#1E5E3A]"></i> Procesos de Negocio</li>
-                        </ul>
-                    </div>
-
-                    <!-- Soft Skills -->
-                    <div class="notion-card p-4 space-y-2.5">
-                        <h4 class="text-xs font-bold text-[#37352F] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>⚡</span> Fortalezas Personales
-                        </h4>
-                        <ul class="text-xs text-[#787774] space-y-1.5">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#2B579A]"></i> Creatividad e Innovación</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#2B579A]"></i> Organización del Tiempo</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#2B579A]"></i> Consistencia & Perseverancia</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#2B579A]"></i> Responsabilidad y Compromiso</li>
-                        </ul>
-                    </div>
-
-                    <!-- Idiomas -->
-                    <div class="notion-card p-4 space-y-2.5">
-                        <h4 class="text-xs font-bold text-[#37352F] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>🌐</span> Idiomas
-                        </h4>
-                        <div class="space-y-2 text-xs">
-                            <div class="flex justify-between items-center">
-                                <span class="font-medium text-[#37352F]">Español</span>
-                                <span class="px-2 py-0.5 rounded bg-[#DBEDDB] text-[#1E5E3A] text-[11px] font-semibold">Nativo</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="font-medium text-[#37352F]">Inglés</span>
-                                <span class="px-2 py-0.5 rounded bg-[#E0E8F6] text-[#2B579A] text-[11px] font-semibold">Fluido / Académico</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Arte & Bienestar -->
-                    <div class="notion-card p-4 space-y-2.5">
-                        <h4 class="text-xs font-bold text-[#37352F] uppercase tracking-wider flex items-center gap-1.5">
-                            <span>🧘</span> Disciplinas Físicas
-                        </h4>
-                        <ul class="text-xs text-[#787774] space-y-1.5">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#9E2A59]"></i> Técnica de Danza</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#9E2A59]"></i> Fundamentos de Pilates</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#9E2A59]"></i> Acondicionamiento Físico</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-[#9E2A59]"></i> Docencia e Instrucción</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- TAB 5: VISIÓN & EMPRENDIMIENTO -->
-            <div id="content-vision" class="tab-pane hidden space-y-6">
-                
-                <div class="notion-card p-6 space-y-4 border-l-4 border-l-[#5A32A3]">
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl">🧘‍♀️</span>
-                        <div>
-                            <h3 class="text-base font-bold text-[#37352F]">Estudio Boutique de Danza & Pilates</h3>
-                            <p class="text-xs text-[#787774]">Proyecto de Emprendimiento e Innovación</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-xs sm:text-sm text-[#37352F] leading-relaxed">
-                        Mi visión es fundar y dirigir un <strong>estudio boutique enfocado en danza y pilates</strong>, aplicando herramientas de <em>Business Intelligence</em> para la optimización de horarios, gestión financiera y retención de comunidad, combinándolo con mi propia pasión por <strong>impartir clases directamente como instructora</strong>.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                        <div class="p-3 bg-[#F7F7F5] rounded-md border border-[#E9E9E7]">
-                            <span class="font-bold text-[#37352F] block mb-1">🎓 Doble Titulación</span>
-                            <span class="text-[#787774]">Completar la carrera de BI y titulación internacional.</span>
-                        </div>
-                        <div class="p-3 bg-[#F7F7F5] rounded-md border border-[#E9E9E7]">
-                            <span class="font-bold text-[#37352F] block mb-1">📊 Analítica de Estudio</span>
-                            <span class="text-[#787774]">Gestión de métricas, finanzas y experiencia del usuario.</span>
-                        </div>
-                        <div class="p-3 bg-[#F7F7F5] rounded-md border border-[#E9E9E7]">
-                            <span class="font-bold text-[#37352F] block mb-1">💃 Docencia Directa</span>
-                            <span class="text-[#787774]">Impartir sesiones formativas presenciales.</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- TAB 6: CONTACTO -->
-            <div id="content-contacto" class="tab-pane hidden space-y-6">
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <a href="mailto:natalia.ortega1338@gmail.com" class="notion-card p-4 flex items-center gap-3 hover:bg-[#F7F7F5] transition-colors">
-                        <div class="w-9 h-9 rounded-lg bg-[#E0E8F6] text-[#2B579A] flex items-center justify-center text-base">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-[#37352F] block">Correo Electrónico</span>
-                            <span class="text-xs text-[#2B579A]">natalia.ortega1338@gmail.com</span>
-                        </div>
-                    </a>
-
-                    <a href="tel:7776531326" class="notion-card p-4 flex items-center gap-3 hover:bg-[#F7F7F5] transition-colors">
-                        <div class="w-9 h-9 rounded-lg bg-[#DBEDDB] text-[#1E5E3A] flex items-center justify-center text-base">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-[#37352F] block">Teléfono / WhatsApp</span>
-                            <span class="text-xs text-[#1E5E3A]">+52 777 653 1326</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Fast Message Form -->
-                <div class="notion-card p-5 space-y-4">
-                    <h4 class="text-xs font-bold text-[#37352F] uppercase tracking-wider flex items-center gap-1.5">
-                        <span>✉️</span> Enviar Mensaje Rápido
-                    </h4>
-
-                    <form onsubmit="event.preventDefault(); window.location.href='mailto:natalia.ortega1338@gmail.com?subject=Contacto desde Portafolio - ' + encodeURIComponent(document.getElementById('sender-name').value) + '&body=' + encodeURIComponent(document.getElementById('sender-msg').value);" class="space-y-3">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <div>
-                                <label for="sender-name" class="block text-xs font-medium text-[#787774] mb-1">Nombre</label>
-                                <input type="text" id="sender-name" required placeholder="Tu nombre" class="w-full px-3 py-2 text-xs rounded-md bg-[#F7F7F5] border border-[#E9E9E7] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#37352F]">
-                            </div>
-                            <div>
-                                <label for="sender-email" class="block text-xs font-medium text-[#787774] mb-1">Correo Electrónico</label>
-                                <input type="email" id="sender-email" required placeholder="tu@correo.com" class="w-full px-3 py-2 text-xs rounded-md bg-[#F7F7F5] border border-[#E9E9E7] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#37352F]">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="sender-msg" class="block text-xs font-medium text-[#787774] mb-1">Mensaje</label>
-                            <textarea id="sender-msg" rows="3" required placeholder="Hola Natalia..." class="w-full px-3 py-2 text-xs rounded-md bg-[#F7F7F5] border border-[#E9E9E7] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#37352F]"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-2.5 rounded-md bg-[#37352F] hover:bg-[#201F1D] text-white text-xs font-semibold shadow-xs flex items-center justify-center gap-1.5 transition-all">
-                            <i class="fa-regular fa-paper-plane text-xs"></i>
-                            <span>Redactar en mi Cliente de Correo</span>
-                        </button>
-                    </form>
                 </div>
 
             </div>
 
         </div>
+    </section>
 
-        <!-- Notion Page Footer -->
-        <div class="border-t border-[#E9E9E7] bg-[#F7F7F5] py-4 px-6 sm:px-12 text-center text-xs text-[#787774] flex flex-col sm:flex-row items-center justify-between gap-2">
-            <span>© 2026 Natalia Ortega López • Universidad Panamericana</span>
-            <span>Business Intelligence & Data Strategy</span>
+    <!-- Sección 4: Habilidades & Competencias -->
+    <section id="habilidades" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#050505]">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">04 / Competencias</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Habilidades & Idiomas</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Business Analytics -->
+                <div class="black-card p-6 space-y-3">
+                    <span class="text-xs font-bold text-white uppercase">Analítica</span>
+                    <h3 class="text-base font-display font-bold text-white">Business Intelligence</h3>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Análisis de Procesos</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Métricas & KPIs</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Toma de Decisiones</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Enfoque Data-Driven</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="black-card p-6 space-y-3">
+                    <span class="text-xs font-bold text-white uppercase">Gestión</span>
+                    <h3 class="text-base font-display font-bold text-white">Habilidades Blandas</h3>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Organización del Tiempo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Creatividad e Innovación</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Consistencia & Perseverancia</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Alta Responsabilidad</li>
+                    </ul>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="black-card p-6 space-y-3">
+                    <span class="text-xs font-bold text-white uppercase">Idiomas</span>
+                    <h3 class="text-base font-display font-bold text-white">Comunicación</h3>
+                    <div class="space-y-3 pt-1 text-xs">
+                        <div>
+                            <div class="flex justify-between text-white font-medium mb-1">
+                                <span>Español</span>
+                                <span class="text-[#888888]">Nativo</span>
+                            </div>
+                            <div class="w-full bg-[#1F1F1F] h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-white h-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-white font-medium mb-1">
+                                <span>Inglés</span>
+                                <span class="text-[#888888]">Fluido</span>
+                            </div>
+                            <div class="w-full bg-[#1F1F1F] h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-white h-full w-5/6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estilo de Vida -->
+                <div class="black-card p-6 space-y-3">
+                    <span class="text-xs font-bold text-white uppercase">Estilo</span>
+                    <h3 class="text-base font-display font-bold text-white">Intereses</h3>
+                    <ul class="space-y-2 text-xs text-[#A1A1AA]">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Danza e Instrucción</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Fitness & Gimnasio</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Convivencia & Networking</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-white"></i> Música y Creatividad</li>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
+    </section>
 
-    </main>
+    <!-- Sección 5: Proyecto de Emprendimiento -->
+    <section id="vision" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#080808]">
+        <div class="max-w-5xl mx-auto space-y-12">
+            
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">05 / Emprendimiento</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Visión de Negocio & Estudio</h2>
+            </div>
 
-    <!-- Interactive Tab Switcher Script -->
+            <!-- Spotlight Card -->
+            <div class="black-card p-8 sm:p-12 space-y-6 glow-border">
+                <div class="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                    <span>Proyecto de Emprendimiento Principal</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-4xl font-display font-extrabold text-white">
+                    Estudio Boutique de Danza & Pilates
+                </h3>
+
+                <p class="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed max-w-3xl">
+                    Creación y dirección de un estudio boutique de movimiento consciente y entrenamiento. El modelo aplica herramientas analíticas de <em>Business Intelligence</em> para optimizar horarios, retención y rentabilidad, sumado a la impartición directa de clases por parte de Natalia como instructora.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#1F1F1F] text-xs">
+                    <div class="p-4 rounded-xl bg-[#141414] border border-[#262626]">
+                        <span class="font-bold text-white block mb-1">🎓 Doble Titulación</span>
+                        <p class="text-[#888888]">Acreditación internacional en análisis de negocio.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#141414] border border-[#262626]">
+                        <span class="font-bold text-white block mb-1">📊 Analítica de Estudio</span>
+                        <p class="text-[#888888]">Métricas de asistencia, finanzas y retención de alumnos.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#141414] border border-[#262626]">
+                        <span class="font-bold text-white block mb-1">💃 Docencia Directa</span>
+                        <p class="text-[#888888]">Impartición directa de sesiones y liderazgo presencial.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección 6: Contacto Directo -->
+    <section id="contacto" class="py-24 px-6 border-t border-[#1A1A1A] bg-[#050505]">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="text-xs font-bold text-[#888888] uppercase tracking-widest block">06 / Contacto</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Iniciemos una conversación</h2>
+                <p class="text-xs sm:text-sm text-[#A1A1AA] max-w-md mx-auto">
+                    Disponible para proyectos de Business Intelligence, iniciativas sociales y oportunidades profesionales.
+                </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                
+                <a href="mailto:natalia.ortega1338@gmail.com" class="black-card p-6 text-center space-y-2 block group">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-[#1A1A1A] text-white flex items-center justify-center text-sm group-hover:bg-white group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="block font-display font-bold text-sm text-white">Correo</span>
+                    <span class="text-xs text-[#A1A1AA] group-hover:text-white transition-colors break-all">natalia.ortega1338@gmail.com</span>
+                </a>
+
+                <a href="tel:7776531326" class="black-card p-6 text-center space-y-2 block group">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-[#1A1A1A] text-white flex items-center justify-center text-sm group-hover:bg-white group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="block font-display font-bold text-sm text-white">Teléfono</span>
+                    <span class="text-xs text-[#A1A1AA] group-hover:text-white transition-colors">+52 777 653 1326</span>
+                </a>
+
+                <div class="black-card p-6 text-center space-y-2">
+                    <div class="w-10 h-10 mx-auto rounded-xl bg-[#1A1A1A] text-white flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="block font-display font-bold text-sm text-white">Ubicación</span>
+                    <span class="text-xs text-[#A1A1AA]">CDMX, México</span>
+                </div>
+
+            </div>
+
+            <!-- Fast Message Form -->
+            <div class="black-card p-8 sm:p-10 space-y-5">
+                <h3 class="text-base font-display font-bold text-white text-center">Enviar Mensaje Rápido</h3>
+                
+                <form onsubmit="event.preventDefault(); window.location.href='mailto:natalia.ortega1338@gmail.com?subject=Contacto desde Portafolio - ' + encodeURIComponent(document.getElementById('sender-name').value) + '&body=' + encodeURIComponent(document.getElementById('sender-msg').value);" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="sender-name" class="block text-xs font-semibold text-[#888888] mb-1">Nombre</label>
+                            <input type="text" id="sender-name" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#262626] text-xs text-white placeholder-[#555555] focus:outline-none focus:border-white transition-colors">
+                        </div>
+                        <div>
+                            <label for="sender-email" class="block text-xs font-semibold text-[#888888] mb-1">Correo</label>
+                            <input type="email" id="sender-email" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#262626] text-xs text-white placeholder-[#555555] focus:outline-none focus:border-white transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="sender-msg" class="block text-xs font-semibold text-[#888888] mb-1">Mensaje</label>
+                        <textarea id="sender-msg" rows="3" required placeholder="Hola Natalia..." class="w-full px-4 py-3 rounded-xl bg-[#121212] border border-[#262626] text-xs text-white placeholder-[#555555] focus:outline-none focus:border-white transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-white hover:bg-[#E4E4E7] text-black font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-paper-plane text-xs"></i>
+                        <span>Redactar en mi Cliente de Correo</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-[#1A1A1A] bg-[#050505] text-center space-y-2">
+        <span class="font-display font-bold text-white text-base">Natalia Ortega López</span>
+        <p class="text-xs text-[#71717A] uppercase tracking-wider">Universidad Panamericana • Business Intelligence</p>
+        <p class="text-[11px] text-[#555555] pt-2">© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Mobile Menu Script -->
     <script>
-        function switchTab(tabId) {
-            // Hide all tab panes
-            document.querySelectorAll('.tab-pane').forEach(el => {
-                el.classList.add('hidden');
-            });
-            // Remove active class from all tabs
-            document.querySelectorAll('.notion-tab').forEach(el => {
-                el.classList.remove('active');
-            });
-            // Show selected pane and set tab as active
-            const targetContent = document.getElementById('content-' + tabId);
-            const targetTab = document.getElementById('tab-' + tabId);
-            if (targetContent) targetContent.classList.remove('hidden');
-            if (targetTab) targetTab.classList.add('active');
-        }
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        function copyCurrentLink() {
-            navigator.clipboard.writeText(window.location.href).then(() => {
-                const btn = document.getElementById('copy-btn-text');
-                btn.innerText = '¡Copiado! ✓';
-                setTimeout(() => {
-                    btn.innerText = 'Copiar Enlace';
-                }, 2000);
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
-        }
+        });
     </script>
 </body>
 </html>
